@@ -3,7 +3,11 @@ package com.pDos.service;
 import com.pDos.dto.Persona;
 import org.springframework.http.ResponseEntity;
 
-public interface IPersonaService {
+import java.util.Optional;
 
-    public Iterable<Persona> getAllPersonas();
+public interface IPersonaService {
+    Iterable<Persona> getAllPersonas();
+    Optional<Persona> getPersonaById(Long id);
+    Persona createNewPersona(Persona persona);
+
 }
